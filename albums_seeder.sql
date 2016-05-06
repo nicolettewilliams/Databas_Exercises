@@ -1,29 +1,35 @@
- USE codeup_test_db;
+USE codeup_test_db;
 
-DROP TABLE IF EXISTS albums;
+TRUNCATE albums;
 
-CREATE TABLE albums (
-    id INT UNSIGNED NOT NULL AUTO_INCREMENT, 
-    artist_name VARCHAR(80) NOT NULL,
-    album_name VARCHAR(80) NOT NULL,
-    release_date YEAR(4),
-    sales FLOAT UNSIGNED, 
-    genre VARCHAR(100),
-    PRIMARY KEY (id)
-);
-
-
-INSERT INTO albums (artist_name, album_name, release_date, sales, genre)
-VALUES  ('Michael Jackson', 'Thriller', '1982', '48.1', 'Pop, Rock, R&B'),
-        ('Eagles', 'Their Greatest Hits(1971-1975', '1976', '32.2', 'Rock, Soft Rock, Folk Rock'),
-        ('Shania Twain', 'Come On Over', '1997', '29.6', 'Country, Pop'),
-        ('Led Zeppelin', 'Led Zeppelin IV', '1971', '29', 'Hard Rock, Heavy Metal'),
-        ('Fleetwood Mac', 'Rumours', '1977', '27.9', 'Soft Rock'),
-        ('Whitney Houston', 'The Bodyguard', '1992', '27.4', 'Soundtrack/R&B, Soul, Pop'),
-        ('AC/DC', 'Back in Black', '1980' , '25.9', 'Hard Rock'),
-        ('Pink Floyd', 'The Dark Side of the Moon', '1973', '22.7', 'Progressive Rock'),
-        ('Meat Loaf', 'Bat Out of Hell', '1977', '20.6', 'Hard Rock, Progressive Rock'),
-        ('Michael Jackson', 'Bad', '1987', '20.3', 'Pop, Funk, Rock'),
-        ('Bee Gees', 'Saturday Night Fever', '1977', '19', 'Disco');
-
-
+INSERT INTO albums (artist, name, release_date, sales, genre)
+VALUES  ('Michael Jackson','Thriller', '1982-01-01', 48.1, 'Pop, Rock R&B'),
+        ('AC/DC','Back in Black','1980-01-01' ,25.9,'Hard Rock'),
+        ('Pink Floyd', 'The Darkside of the Moon', '1973-01-01', 22.7,'Progressive Rock'), 
+        ('Whitney Houston','The Bodygaurd','1992-01-01', 27.4, 'Soundtrack, R&B'),
+        ('Meat Loaf','Bat Out of Hell','1977-01-01',20.6,'progressive rock'),
+        ('Eagles','Their Greatest Hits','1976-01-01',32.2,'folk rock'), 
+        ('Bee Gees','Saturday Night Fever', '1977-01-01',19, 'Disco'),
+        ('Fleetwood Mac','Rumours', '1977-01-01', 27.9, 'Soft Rock'),
+        ('Shania Twain','Come on Over','1997-01-01',29.6,'Country'),
+        ('Led Zeppelin','Led Zeppelin IV','1971-01-01',29.0,'Hard Rock'),
+        ('Michael Jackson','Bad','1987-01-01',20.3,'Pop Funk'),
+        ('Alanis Morissette','Jagged Little Pill','1995-01-01',24.8,'Alternative Rock'),
+        ('Celine Dion','Falling into You','1996-01-01',20.2,'Pop,Soft-Rock'),
+        ('The Beatles','Sgt. Pepper\'s Lonley Hearts Club Band', '1967-01-01',13.1,'Rock'), 
+        ('Eagles','Hotel California','1976-01-01',21.5,'Rock, Soft-Rock'),
+        ('Mariah Carey','Music Box','1993-01-01',19.0,'Pop, R&B'),
+        ('Dirty Dancing','Dirty Dancing','1987-01-01',17.9,'Pop,Rock'),
+        ('Celine Dion','Let\'s Talk about love','1997-01-01',19.3,'Pop, Soft-Rock'),
+        ('The Beatles','1','2000-01-01',21.6,'Rock'),('Adele','21','2011-01-01',22.3,'Pop,Soul'),
+        ('The Beatles','Abbey Road','1969-01-01',14.4,'Rock'),
+        ('Bruce Springsteen','Born in the USA','1984-01-01',19.6,'Rock'),
+        ('Dire Straits','Brother in Arms','1985-01-01',17.7,'Rock'),
+        ('Whitney Houston','Whitney Houston','1985-01-01',17.7,'Pop R&B'),
+        ('James Horner','Titanic: Music from the Motion Picture','1997-01-01',18.1,'Soundtrack'),
+        ('Madonna','the immaculate collection','1990-01-01',19.4,'Pop Dance'),
+        ('Metallica','Metallica','1991-01-01',19.9,'Heavy Metal'),
+        ('Nirvana','Nevermind','1991-01-01',16.1,'Grunge'),
+        ('Pink Floyd','The Wall','1979-01-01',17.6,'Progressive Rock'),
+        ('Santana','Supernatural','1999-01-01',20.5,'Rock'),
+        ('Guns N\' Roses','Appetite for Destruction','1987-01-01',21.3,'Heavy Metal');
