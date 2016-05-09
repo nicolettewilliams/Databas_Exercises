@@ -5,9 +5,10 @@ OR first_name = 'Vidya'
 OR first_name = 'Maya')
 AND gender = 'M';
 
-SELECT *
-FROM employees 
-WHERE last_name LIKE 'E%';
+SELECT concat(first_name, ' ', last_name) AS full_name
+FROM employees
+WHERE (last_name LIKE 'E%'
+OR last_name LIKE '%E');
 
 SELECT first_name, last_name, hire_date
 from employees
